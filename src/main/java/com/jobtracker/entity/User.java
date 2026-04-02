@@ -1,10 +1,16 @@
 package com.jobtracker.entity;
 
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -25,6 +31,10 @@ public class User {
 	private String email;
 	
 	private String password;
+	
+	@OneToMany(mappedBy = "user" , cascade= CascadeType.ALL)
+	@JsonManagedReference
+	private List<Job> jobs;
 
 	public Long getId() {
 		return id;
