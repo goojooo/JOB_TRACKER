@@ -16,8 +16,14 @@ public class UserService {
 	private UserRepository userRepository;
 	
 	// REGISTER
+//	public User registerUser(User user) {
+//		return userRepository.save(user);
+//	}
+	
 	public User registerUser(User user) {
-		return userRepository.save(user);
+	    System.out.println("User: " + user.getEmail());
+	    return userRepository.save(user);
+	    
 	}
 	
 	// LOGIN

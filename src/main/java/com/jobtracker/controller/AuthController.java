@@ -27,10 +27,15 @@ public class AuthController {
 	}
 	
 	// LOGIN API
+//	@PostMapping("/login")
+//	public User login(@RequestParam String email,
+//					  @RequestParam String password) {
+//		System.out.println("AuthController.login()");
+//		return userService.loginUser(email, password);
+//	}
+	
 	@PostMapping("/login")
-	public User login(@RequestParam String email,
-					  @RequestParam String password) {
-		System.out.println("AuthController.login()");
-		return userService.loginUser(email, password);
+	public User login(@RequestBody User user) {
+	    return userService.loginUser(user.getEmail(), user.getPassword());
 	}
 }
