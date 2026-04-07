@@ -1,0 +1,147 @@
+:root {
+  /* 🌈 Bright Color Palette */
+  --text: #1f2937;
+  --text-h: #111827;
+  --bg: #fdfcff;
+  --border: #e0e7ff;
+  --code-bg: #eef2ff;
+
+  /* ✨ Accent Colors */
+  --accent: #7c3aed;
+  --accent-2: #06b6d4;
+  --accent-3: #f59e0b;
+
+  --accent-bg: linear-gradient(135deg, #c084fc, #60a5fa);
+  --accent-border: #a78bfa;
+
+  --card-bg: #ffffff;
+  --shadow:
+    rgba(124, 58, 237, 0.2) 0 10px 20px,
+    rgba(0, 0, 0, 0.05) 0 4px 6px;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.2px;
+  color: var(--text);
+  background: linear-gradient(135deg, #fdfcff, #eef2ff);
+}
+
+/* 📱 Responsive font */
+@media (max-width: 1024px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+/* 🌞 Body */
+body {
+  margin: 0;
+}
+
+/* 📦 Main container */
+#root {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border-inline: 1px solid var(--border);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+/* 🧠 Headings */
+h1, h2 {
+  font-family: var(--heading);
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1px;
+  margin: 32px 0;
+
+  background: linear-gradient(90deg, #7c3aed, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-size: 24px;
+  /* margin-bottom: 8px; */
+      margin: 13px;
+}
+h3{
+  margin: 13px;
+}
+
+/* 📄 Text */
+p {
+  margin: 0;
+  color: #4b5563;
+}
+
+/* 💻 Code blocks */
+code {
+  font-family: var(--mono);
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: var(--code-bg);
+  color: #4f46e5;
+}
+
+/* 🧾 Cards (for jobs etc.) */
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    rgba(124, 58, 237, 0.3) 0 12px 24px;
+}
+
+/* 🔘 Buttons */
+button {
+  background: linear-gradient(135deg, #7c3aed, #06b6d4);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+  margin: 8px;
+}
+
+button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* 🧾 Inputs */
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  outline: none;
+  width: 250px;
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+}
